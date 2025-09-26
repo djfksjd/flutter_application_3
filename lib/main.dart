@@ -44,7 +44,7 @@ Future<void> cartItem() async {
 Future<void> lottonum() async {
   List<int> number = [9, 19, 29, 35, 37, 38];
   Set<int>? mynumber = {};
-  int num = 0;
+  int? num = 0;
 
   for (int i = 0; mynumber.length < 6; i++) {
     mynumber.add(Random().nextInt(45));
@@ -71,24 +71,28 @@ Future<void> lottonum() async {
     print('발금한 로또 번호 : [$mynumber]');
     print('당첨여부 : 1등');
     mynumber = null;
+    num = null;
     print('현재 발급한 로또 번호 : [$mynumber]');
   } else if (num == 4){
     print('도전문제');
     print('발금한 로또 번호 : [$mynumber]');
     print('당첨여부 : 2등');
     mynumber = null;
+    num = null;
     print('현재 발급한 로또 번호 : [$mynumber]');
   } else if (num == 3){
     print('도전문제');
     print('발금한 로또 번호 : [$mynumber]');
     print('당첨여부 : 3등');
     mynumber = null;
+    num = null;
     print('현재 발급한 로또 번호 : [$mynumber]');
   } else if (num <= 2){
     print('도전문제');
     print('발금한 로또 번호 : [$mynumber]');
     print('당첨여부 : 실패');
     mynumber = null;
+    num = null;
     print('현재 발급한 로또 번호 : [$mynumber]');
   }
 }
